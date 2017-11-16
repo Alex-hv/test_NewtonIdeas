@@ -1,0 +1,54 @@
+@import "../shared/shared";
+
+.filters{
+  background: white;
+  border: 1px solid #dedede;
+  margin-right: 25px;
+  flex:0;
+  padding: 10px 20px;
+  flex-basis:110px;
+  height:150px;
+
+  form{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.toolbar{
+  justify-content: flex-end;
+
+  .add-post{
+    background-color: rgb(150, 200, 115);
+  }
+}
+
+.news .news-list .post{
+  border-bottom: 1px solid #dedede;
+  padding: 10px 5px;
+}
+
+.news .news-list .post:hover{
+  cursor: pointer;
+  background: rgba(101, 189, 255, 0.24);
+}
+
+.news .pager{
+  display: flex;
+  justify-content: center;
+  padding:10px 0;
+}
+
+.news .pager .number{
+  margin-right: 8px;
+  border-radius: 15px;
+  padding: 4px 8px;
+  background: rgba(101, 189, 255, 0.24);
+  cursor: pointer;
+}
+
+.news .pager .current{
+  background: rgba(101, 189, 255, 0.8);
+
+}
+

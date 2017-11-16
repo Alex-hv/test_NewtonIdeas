@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="filters">
+    <form [formGroup]="filters">
+      <div><input type="radio" formControlName="type" value="health" > <span>health</span> </div>
+      <div><input type="radio" formControlName="type" value="life" > <span>life</span> </div>
+      <div><input type="radio" formControlName="type" value="food" > <span>food</span> </div>
+      <div><button (click)="resetFilters()">reset</button></div>
+    </form>
+  </div>
+  <div class="news">
+    <div class="toolbar">
+      <button class="add-post" (click)="addPost()">add_post</button>
+    </div>
+    <div class="news-list">
+      <p class="post" *ngFor="let post of newsList" (click)="openDetails(post.id)">
+      {{post.id}}: {{post.title}} - {{post.category}}
+      </p>
+    </div>
+    <div class="pager">
+      <span class="number" *ngFor="let number of pagesCount" (click)="changePage(number)" [class.current]="number == currentPage">{{number}}</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="news">
+    <div class="toolbar">
+      <button class="go-back" (click)="goBack()">Go back</button>
+    </div>
+    <div class="news-details" *ngIf="news">
+      {{news.title}} - {{news.description}}
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="news">
+    <div class="toolbar">
+      <button class="go-back" (click)="goBack()">Go back</button>
+      <button class="add-new-post" (click)="addPost()" [class.disabled]="!postForm.valid">Add post</button>
+    </div>
+    <div class="new-post">
+      <form [formGroup]="postForm" >
+        <div><label for="title">Title:</label><input id="title" type="text" formControlName="title"></div>
+        <div class="textarea-container"><label for="description">Description:</label><textarea id="description" type="text" formControlName="description"></textarea></div>
+        <div>
+          <input type="radio" formControlName="category" value="health" > <span>health</span>
+          <input type="radio" formControlName="category" value="life" > <span>life</span>
+          <input type="radio" formControlName="category" value="food" > <span>food</span>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+</div>
